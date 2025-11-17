@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Page corrigée - Exercice blanc n°3 - Loi de Wirth - Certification « Développer des sites web accessibles et conformes au RGAA » - Access42</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--[if (IEMobile)]><meta http-equiv="cleartype" content="on" /><![endif]-->
+		<meta name="pinterest" content="nopin" />
+		<meta name="robots" content="noindex,follow"/>
+		<!-- AccessStyle -->
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	</head>
+
+	<body class="a42-as">
+		<div id="screen" class="a42-wrapper">
+			<!-- Exercice 1 : La zone d'en-tête est implémentée dans un élément <header>, affecté du rôle "banner" -->
+			<header role="banner" class="a42-main-header a42-bgcolor-c4">
+				<div class="a42-container">
+					<div class="a42-main-tools a42-layout-alpha">
+						<div class="a42-main-tools_alpha">
+							<!-- Exercice 1 : La zone de navigation par lien d'accès rapide est implémentée dans un élément <nav>, affecté du rôle "navigation".
+                			Lorsque plusieurs zones de navigation existent dans la page, il est préférable de les distinguer en les nommant au moyen d'une propriété aria-label. -->
+							<nav role="navigation" aria-label="Accès rapide" class="a42-help a42-list-reset a42-list-inline a42-list-inline-fancy">
+							  	<!-- Exercice 1 : Le lien d'accès rapide est implémenté en haut de page. Il pointe vers la zone de contenu principal, généralement le <main>. 
+			                    Il peut être masqué par défaut et n'apparaitre qu'à la prise de focus.
+			                	-->
+								<span><a href="#main" class="a42-link-reset">Aller au contenu</a></span>
+							</nav>
+						</div>
+					</div>
+
+					<div class="a42-main-intro">
+						<h1 class="a42-title-maxi">Loi de Wirth</h1>
+						<div class="a42-main-intro_desc a42-text-great">
+							<p>Les programmes ralentissent plus vite que le matériel accélère.</p>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="a42-main-container">
+				<div class="a42-container a42-clear">
+					<div id="a42-container-bis" class="a42-container-bis a42-clear">
+
+						<div class="a42-page-sidebar" id="sidebar">
+							<!-- Exercice 1 : La zone de navigation principale est implémentée dans un élément <nav>, affecté du rôle "navigation".-->
+							<nav role="navigation" class="a42-toc-container" aria-label="Menu principal">
+                                <!-- Exercice 2 : Les liens du menu de navigation sont structurés au moyen d'une liste -->
+								<ul id="menu" class="a42-toc">
+									<!--  Exercice 2 : L'information de page active transmise par la couleur est également transmise au moyen d'un attribut title. -->
+									<li class="current-page a42-bgcolor-c5"><a href="lois/wirth.html" title="Loi de Wirth (page  active)">Loi de Wirth</a></li>
+									<li><a href="lois/murphy.html">Loi de Murphy</a></li>
+									<li><a href="lois/occam.html">Loi de Occam</a></li>
+									<li><a href="lois/linus.html">Loi de Linus</a></li>
+								</ul>
+							</nav>
+							<!-- Exercice 1 : La zone de recherche est affectée du rôle "search". -->
+							<div role="search">
+								<div class="a42-form-big">
+									<p style="margin-bottom:0">
+										<!--  Exercice 3 : Ajout d'un attribut for="search" sur la balise <label> pour donner au champ de saisie un nom accessible-->
+										<label for="search">Saisir les termes à rechercher</label>
+										<input type="text" id="search" style="width:100%"/>
+									</p>
+									<button id="btn-search" class="a42-btn a42-btn-alpha a42-btn-alpha--ghost" style="width:100%"><span aria-hidden="true">🔍</span>Rechercher</button>
+								</div>
+
+								<div id="results-search" class="a42-bgcolor-c6">
+									<!--  Exercice 4 : Ajout des propriétés aria-live="polite" aria-atomic="true" pour permettre la restitution par les lecteurs d'écrans des mises à jour des résultats de recherche-->
+									<div id="results-search-total" aria-live="polite" aria-atomic="true" class="a42-title-gamma"></div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Exercice 1 : La zone de contenu principal est implémentée dans un élément <main>, affecté du rôle "main".
+		                C'est cet élément qui est la cible du lien d'accès rapide. 
+			            Un attribut tabindex="-1" permet de synchroniser la reprise du focus avec la tabulation pour certains navigateur.
+			            -->
+						<main role="main" id="main" class="a42-page-content" tabindex="-1">
+							<p><b>La loi de Wirth est une loi empirique formulée par Niklaus Wirth en 1995, selon laquelle <q>les programmes ralentissent plus vite que le matériel accélère</q>. Ou bien : le nombre d'instructions nécessaires à l'interprétation de programmes plus sophistiqués demande des ordinateurs plus rapides.</b></p>
+							
+							<!-- Exercice 2 : Cette image qui ne transmet aucune information est ignorée des technologies d'assistance grâce à un attribut alt vide. -->
+							<img src="img/Image-header-servicio-hardware.jpg" alt="" style="margin-bottom:15px"/>
+							<h2>Explication</h2>
+
+							<p>En informatique, la loi de Wirth est un corollaire de la loi de Moore.</p>
+
+							<p class="center"><button class="a42-btn a42-btn-alpha" id="modal-btn" data-toggle="modal" data-target="#subscribemodal">La loi de Moore en 2 secondes <span aria-hidden="true">🕖</span></button></p>
+
+							<p>Alors que le matériel devient de plus en plus rapide, la loi de Wirth montre que les programmes n'accélèrent pas pour autant. Au contraire, ils deviennent de plus en plus gros et lents, les développeurs justifiant cette lenteur excessive comme compensée par la loi de Moore !</p>
+
+							<!-- Exercice 2 : Les deux liens "En savoir plus" partagent le même contexte. Ce sont donc des liens identiques qui mènent vers des pages différentes. Il est nécessaire de les différencier, par exemple en ajoutant un attribut title qui reprenda le nom visible avec une information complémentaire : "En savoir plus sur le syndrome de l'obésiciel" et "En savoir plus sur la lenteur ressentie par l'utilisateur" -->
+							<p><a href="https://interstices.info/le-syndrome-de-lobesiciel-des-applications-energivores/" title="En savoir plus sur le syndrome de l'obésiciel">En savoir plus</a></p>
+
+							<p><strong>La loi de Wirth devient ainsi une excuse à la production d'obésiciels.</strong> En effet, les programmeurs prennent principalement en compte le ressenti de l'utilisateur plutôt que l'efficacité réelle. <b>Les logiciels ont donc une lenteur ressentie constante bien que la puissance processeur de leur matériel augmente.</b></p>
+
+							<p><a href="https://tempsdereaction.wordpress.com/2018/05/28/lenteur-ressentie/" title="En savoir plus sur la lenteur ressentie par l'utilisateur">En savoir plus</a></p>
+
+							<!-- Exercice 2 : Ce texte est un titre de niveau 3 -->
+							<h3>Pas de ROI sur l'optimisation</h3>
+
+							<p>D'un point de vue financier, une société développant un logiciel n'a que peu d'intérêt à faire travailler des codeurs sur de l'optimisation car le retour sur investissement est faible (comme les utilisateurs sont habitués à ces lenteurs, bien peu refusent d'acheter un logiciel pour cette cause de lenteur).</p>
+
+							<!-- Exercice 2 : Ce texte est un titre de niveau 3 -->
+							<h3>Des vitesses d'accès pourtant inchangées</h3>
+
+							<p>Il faut comprendre aussi que si la puissance de calcul a été démultipliée, la vitesse de communication vers l'extérieur n'a que très peu augmenté. Les accès disques durs, sur des disques durs « classiques » à plateaux et têtes de lectures magnétiques, peuvent représenter une grosse partie des latences en bureautique. L'arrivée des mémoires de stockage à mémoire flash (SSD) change cet état de fait.</p>
+
+							<h2>Les lois de l'informatique</h2>
+
+							<p>Il existe d'autres lois en informatique aux côtés de la loi de Wirth&nbsp;:</p>
+
+							<ol>
+								<li>Loi de Gilder : la bande passante double tous les ans&nbsp;;</li>
+								<li>Loi de Morris : le nombre de Gbits par pouce double tous les ans&nbsp;;</li>
+								<li>Loi des Objets Connectés : le nombre d'objets tagués double tous les ans&nbsp;;</li>
+								<li>Loi de Moore : le nombre de transistors d'un microprocesseur double tous les 18 mois&nbsp;;</li>
+								<li>Loi de Koomey : l’efficacité énergétique des ordinateurs double tous les dix-huit mois (deuxième corollaire de la loi de Moore après la loi de Wirth)&nbsp;;</li>
+								<li>Loi du Big Data : la quantité de données double tous les 2 ans&nbsp;;</li>
+								<li>Loi de Metcalfe : la valeur d'un réseau varie selon le carré du nombre de ses nœuds.</li>
+							</ol>
+
+							<!-- Exercice 2 : Ce texte est un titre de niveau 2 -->
+							<h2>Votez pour le logiciel le plus gourmand !</h2>
+
+							<div id="msg-ok"></div>
+							<!--  Exercice 3 : 
+							Les étiquettes de tous les champs du formulaire sont définies au moyen d'éléments <label>, affectés d'attributs "for" dont la valeur correspond à l'id du champ. 
+                            Les indications de champs obligatoires sont faites au moyen d'astérisques dans les étiquettes, et d'un texte visible précédent qui définit l'astérisque.
+                            Les propriétés aria-required sont donc non obligatoires mais sont exploitées par le script JS pour la gestion des erreurs (NE PAS LES SUPPRIMER). -->
+							<form action="/" class="a42-form-big" id="form" novalidate>
+								<p class="a42-required">* champs obligatoires</p>
+								<p>
+									<label for="prenom">Prénom</label>
+
+									<!--  Exercice 3 : Des propriétés autocomplete sont définies sur les champs de saisie Prénom, nom et adresse email. -->
+									<input type="text" id="prenom" autocomplete="given-name" name="prenom" />
+								</p>
+								<p>
+									<label for="nom">Nom <span class="a42-required">*</span></label>
+									<input type="text" id="nom" aria-required="true" autocomplete="family-name" name="user-name"/>
+									
+								</p>
+								<p>
+									<label for="email">Adresse <span lang="en">email</span><span class="a42-required">*</span></label>
+									<!--  Exercice 3 : L'indication du format de saisie est liée au champ par la propriété aria-describedby. -->
+									<input type="email" id="email" name="user-email"  aria-required="true"  autocomplete="email" aria-describedby="aide-email"/>
+								</p>
+								<span class="help-message" id="aide-email"><sub><i>format : nomprenom@domain.com</i></sub></span>
+
+								<p>
+									<label for="message">Laissez un commentaire</label>
+									<textarea name="message" id="message" cols="30" rows="10"></textarea>
+								</p>
+
+								<!--  Exercice 3 : L'ensemble des cases à cocher est regroupé dans un élément <fieldset>.
+                                Le titre du regroupement est défini par l'élément <legend>. -->
+								<fieldset>
+									<legend>Quels sont les logiciels les plus gourmands selon-vous&nbsp;?</legend>
+									<p>
+										<input type="checkbox" id="adobe" name="plus"> 
+										<label for="adobe">Adobe Reader</label>
+									</p>
+									<p>
+										<input type="checkbox" id="word" name="plus"> 
+										<label for="word">Microsoft Word</label>
+									</p>
+									<p>
+										<input type="checkbox" id="frontpage" name="plus"> 
+										<label for="frontpage">Microsoft Front Page</label>
+									</p>
+									<p>
+										<input type="checkbox" id="publisher" name="plus"> 
+										<label for="publisher">Microsoft Publisher</label>
+									</p>
+									<p>
+										<input type="checkbox" id="finalcut" name="plus"> 
+										<label for="finalcut">Apple Final cut pro</label>
+									</p>
+									<p>
+										<input type="checkbox" id="thunderbird" name="plus"> 
+										<label for="thunderbird">Thunderbird</label>
+									</p>
+								</fieldset>
+
+								<!--  Exercice 3 : L'ensemble des cases à cocher est regroupé dans un élément <fieldset>.
+                                Le titre du regroupement est défini par l'élément <legend>. -->
+								<fieldset>
+									<legend>Quels sont les logiciels les moins gourmands selon-vous&nbsp;?</legend>
+									<p>
+										<input type="checkbox" id="adobe1" name="moins"> 
+										<label for="adobe1">Adobe Reader</label>
+									</p>
+									<p>
+										<input type="checkbox" id="word1" name="moins"> 
+										<label for="word1">Microsoft Word</label>
+									</p>
+									<p>
+										<input type="checkbox" id="frontpage1" name="moins"> 
+										<label for="frontpage1">Microsoft Front Page</label>
+									</p>
+									<p>
+										<input type="checkbox" id="publisher1" name="moins"> 
+										<label for="publisher1">Microsoft Publisher</label>
+									</p>
+									<p>
+										<input type="checkbox" id="finalcut1" name="moins"> 
+										<label for="finalcut1">Apple Final cut pro</label>
+									</p>
+									<p>
+										<input type="checkbox" id="thunderbird1" name="moins"> 
+										<label for="thunderbird1">Thunderbird</label>
+									</p>
+								</fieldset>
+
+								<p>
+									<!--  Exercice 3 : La propriété aria-label est supprimé du bouton, son contenu ne reprenait pas le nom visible. -->
+									<input type="submit" value="Voter maintenant" id="sendBtn" />
+								</p>
+
+							</form>
+
+							<div class="onoff">
+								<button class="a42-toggle-button">Voir les derniers résultats</button>
+								<div class="a42-toggle-content is-closed">
+									<!-- Exercice 2 : Un titre est ajouté dans un élément <caption>. -->
+									<table class="a42-table-fixed">
+										<caption>Résultats des votes</caption>
+										<thead>
+											<tr>
+												<!-- Exercice 2 : Les en-têtes de colonnes sont implémentées dans des éléments <th>, affectés de l'attribut scope="col" -->
+												<td></td>
+												<th scope="col">Votes pour &laquo;&nbsp;logiciel le plus gourmand&nbsp;&raquo;</th>
+												<th scope="col">Votes pour &laquo;&nbsp;logiciel le moins gourmand&nbsp;&raquo;</th>
+											</tr>
+										</thead>
+										<tr>
+											<!-- Exercice 2 : Les en-têtes de lignes sont implémentées dans des éléments <th>, affectés de l'attribut scope="row" -->
+											<th scope="row">Adobe Reader</th>
+											<td>10</td>
+											<td>156</td>
+										</tr>
+										<tr>
+											<th scope="row">Microsoft Word</th>
+											<td>989</td>
+											<td>34</td>
+										</tr>
+										<tr>
+											<th scope="row">Microsoft Front Page</th>
+											<td>900</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<th scope="row">Microsoft Publisher</th>
+											<td>543</td>
+											<td>54</td>
+										</tr>
+										<tr>
+											<th scope="row">Apple Final cut pro</th>
+											<td>800</td>
+											<td>24</td>
+										</tr>
+										<tr>
+											<th scope="row">Thunderbird</th>
+											<td>240</td>
+											<td>80</td>
+										</tr>
+									</table>
+									
+								</div>
+							</div>
+
+						</main>
+					</div>
+					<!-- Exercice 1 : La zone "Voir aussi" est implémentée dans un élément <aside>, affecté du rôle "complementary". Cette implémentation n'est pas obligatoire, le contenu de ce bloc aurait pu également être intégré directement dans la balise <main> -->
+					<aside role="complementary" class="a42-page-footer">
+						<div class="a42-user-choices a42-user-choices-fixed">
+							<h2>Voir aussi</h2>
+								
+                            <!-- Exercice 2 : Les liens de la section "Voir aussi" sont structurés au moyen d'une liste -->
+							<ul class="a42-list-reset a42-user-choices_list">
+								<li class="a42-user-choices_item">
+									<a href="https://fr.wikipedia.org/wiki/Loi_de_Moore" class="a42-btn a42-btn-skeleton">
+										<span class="a42-btn-flex">
+											<span class="a42-btn-flex_content">
+												<span class="a42-btn-flex_child">
+													<b class="a42-btn_title">Loi de Moore</b>
+												</span>
+											</span>
+										</span>
+									</a>
+								</li><!--
+								--><li class="a42-user-choices_item">
+									<a href="https://fr.wikipedia.org/wiki/Loi_de_Koomey" class="a42-btn a42-btn-skeleton--focus">
+										<span class="a42-btn-flex">
+											<span class="a42-btn-flex_content">
+												<span class="a42-btn-flex_child">
+													<b class="a42-btn_title">Loi de Koomey</b>
+												</span>
+											</span>
+										</span>
+									</a>
+								</li><!--
+								--><li class="a42-user-choices_item">
+									<a href="https://fr.wikipedia.org/wiki/Singularit%C3%A9_technologique" class="a42-btn a42-btn-skeleton">
+										<span class="a42-btn-flex">
+											<span class="a42-btn-flex_content">
+												<span class="a42-btn-flex_child">
+													<b class="a42-btn_title">Singularité technologique</b>
+												</span>
+											</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+
+			<!-- Exercice 1 : La zone de pied de page est implémentée dans un élément <footer>, affecté du rôle "contentinfo". -->
+			<footer class="a42-main-footer" role="contentinfo">
+				<div class="a42-container">
+					<div class="a42-main-footer_col a42-credits">
+
+                    <!-- Exercice 2 : Les liens des réseaux sociaux sont structurés au moyen d'une liste -->
+						<ul class="a42-contact">
+							<li>
+								<!-- Exercice 2 : Les noms accessibles des réseaux sociaux sont créés identifant les svg contenus dans chaque lien comme des images porteuses d'information : ajout du role="img" et d'un aria-label pertinent sur chaque svg. -->
+								<a href="https://twitter.com/">
+									<svg role="img" aria-label="Compte Twitter" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
+										<path d="m9.5 24a17.1 17.1 0 0 0 17.3-17.2 1.9 1.9 0 0 0 -.1-.8 11.8 11.8 0 0 0 3.1-3.2 14 14 0 0 1 -3.5 1 6.6 6.6 0 0 0 2.7-3.4 13.2 13.2 0 0 1 -3.9 1.5 6 6 0 0 0 -4.4-1.9 6.1 6.1 0 0 0 -6.1 6.1 5.9 5.9 0 0 0 .2 1.3 16.8 16.8 0 0 1 -12.5-6.3 6.2 6.2 0 0 0 -.8 3.1 5.8 5.8 0 0 0 2.7 5 5.4 5.4 0 0 1 -2.8-.8 6.1 6.1 0 0 0 4.9 6l-1.6.2h-1.2a6.3 6.3 0 0 0 5.7 4.2 12.4 12.4 0 0 1 -7.5 2.6h-1.5a17.4 17.4 0 0 0 9.3 2.6"/>
+									</svg>
+								</a>
+							</li><!--
+							--><li>
+								<a href="https://www.linkedin.com/">
+									<svg role="img" aria-label="Compte LinkedIn" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
+										<path d="m25.2 0h-20.4a1.8 1.8 0 0 0 -1.8 1.7v20.6a1.8 1.8 0 0 0 1.8 1.7h20.4a1.8 1.8 0 0 0 1.8-1.7v-20.6a1.8 1.8 0 0 0 -1.8-1.7zm-15.1 20.5h-3.5v-11.5h3.5zm-1.8-13.1a2 2 0 0 1 -2-2 2 2 0 0 1 2-2.1 2.1 2.1 0 0 1 2.1 2.1 2 2 0 0 1 -2.1 2zm15.2 13.1h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7h-3.5v-11.5h3.4v1.6a3.9 3.9 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5z" fill="#1d1d1b"/>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="http://eepurl.com/dgHY2b" lang="en">
+									<svg role="img" aria-label="Compte Newsletter" xmlns="http://www.w3.org/2000/svg" width="29.1" height="21" viewBox="0 0 29.1 21" class="a42-icon-newsletter">
+										<g><g id="ae01af33-9b93-412d-8a0f-378d554b35aa" data-name="icon-newsletter"><path d="M21.2,5.2V0H20V1.1a13.1,13.1,0,0,1-9.1,4v7.7a12.6,12.6,0,0,1,9.1,4v1h1.2V12.7a3.9,3.9,0,0,0,3.2-3.8A3.7,3.7,0,0,0,21.2,5.2Zm0,6.3V6.4a2.6,2.6,0,0,1,2,2.5A2.6,2.6,0,0,1,21.2,11.5Z"></path><path d="M8.4,13.1H9.7V4.6H4.2A4.2,4.2,0,0,0,0,8.9a4.3,4.3,0,0,0,3.6,4.2l1.9,6.2a2.6,2.6,0,0,0,1.1,1.4,2.7,2.7,0,0,0,1.2.3h.7a2,2,0,0,0,1.4-1.4,2.7,2.7,0,0,0-.2-2.3A6.3,6.3,0,0,1,8.4,13.1Z"></path><rect x="26.1" y="8.3" width="3" height="1.21"></rect><rect x="24.4" y="4.2" width="3" height="1.21" transform="translate(4.2 19.7) rotate(-45)"></rect><rect x="25.3" y="11.4" width="1.2" height="3.03" transform="translate(-1.6 22.1) rotate(-45)"></rect></g></g>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="mailto:bonjour@access42.net">
+									<svg role="img" aria-label="Envoyer un email à Access42" xmlns="http://www.w3.org/2000/svg">
+										 <path d="M 0.96367729,0.96367729 H 27.946643 V 20.787897 H 0.96367729 Z m 0,0 L 13.078478,13.078478 q 1.376681,1.101345 2.753363,0 L 27.946643,0.96367729 M 0.96367729,20.787897 10.875787,10.875787 m 7.158746,0 9.91211,9.91211" style="fill:none;stroke:#000000;stroke-width:1.92735457" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+							 
+						<p class="a42-credits_title">
+							<b>Texte extrait et adapté de l'article &laquo;&nbsp;<a href="https://fr.wikipedia.org/wiki/Loi_de_Wirth">Loi de Wirth</a>&nbsp;&raquo; de l'encyclopédie Wikipédia</b>
+							<br />(le 11/03/2020)
+						</p>
+						
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+           <!-- Exercice 4 : Ajout des proprétés aria-labelledby="modal-title" et role="dialog". -->
+			<div id="modal-content" class="modal subscribe padding-top-120" aria-labelledby="modal-title" aria-modal="true" tabindex="-1" role="dialog">
+				<div class="modal-dialog text-center" tabindex="0" role="document">
+					<button class="close btn" id="btn-close-modal" aria-label="fermer"><i class="icon-close"></i></button>
+
+            		<!-- Exercice 2 : Au sein d'une fenêtre modale, la hiérarchie des titres reprend au début puisque l'utilisateur entre dans un nouveau contexte de la page. Ce texte est dont un titre de niveau 1. -->
+					<h1 id="modal-title">La loi de Moore</h1>
+
+					<div class="a42-gallery-2cols">
+						<div>
+							<p>La loi de Moore a été exprimée en 1965 dans le magazine Electronics (en) par Gordon E. Moore, ingénieur de Fairchild Semiconductor, un des trois fondateurs d'Intel.</p>
+							<p>Constatant que la « complexité des semi-conducteurs proposés en entrée de gamme » doublait tous les ans à coût constant depuis 1959, date de leur invention, il postulait la poursuite de cette croissance (en 1965, le circuit le plus performant comportait 64 transistors).</p>
+							<p>Cette augmentation exponentielle fut rapidement nommée « loi de Moore » ou, compte tenu de l'ajustement ultérieur, « première loi de Moore ».</p>
+						</div>
+						<div>
+							<!-- Exercice 2 : Cette image est une image légendée car le texte adjacent apporte des informations sur l'image (copyright). Le pattern des images légendées est donc appliqué. L'image légendée est implémentée dans un élément <figure>, et sa légende dans un élément <figcaption>.
+                            Les propriétés role et aria-label assurent la bonne restitution par toutes les technologies d'assistance. -->
+							<figure role="group" aria-label="Graphique publié dans le magazine « Electronics » en 1965 - ©Electronics">
+								<img style="width:50%;margin:auto" alt="Graphique" src="img/loi-moore.gif" />
+								<figcaption>Graphique publié dans le magazine « Electronics » en 1965 - ©Electronics</figcaption>
+							</figure>
+						</div>
+					</div>
+
+					<h2>Des lois de Moore</h2>
+
+					<p>En effet, il y a en fait plusieurs « lois de Moore ».</p>
+
+					<p>Les lois de Moore sont des lois empiriques qui ont trait à l'évolution de la puissance de calcul des ordinateurs et de la complexité du matériel informatique. Au sens strict, on ne devrait pas parler de « lois de Moore » mais de « conjectures de Moore » puisque les énoncés de Moore ne sont que des suppositions.</p>
+
+					<p>Il existe trois « lois » de Moore, deux authentiques (au sens où elles furent émises par Gordon E. Moore), et une série de « lois » qui ont en commun de se prétendre « loi de Moore » mais qui n'en sont que des simplifications inexactes.</p>
+
+					<p>Voir l'<a href="https://fr.wikipedia.org/wiki/Loi_de_Moore">article wikipédia</a> pour en savoir plus</p>
+					
+				</div>
+			</div>
+
+		<script src="js/dialog.js" type="text/javascript"></script>
+		<script src="js/disclosure.js" type="text/javascript"></script>
+		<script src="js/search.js" type="text/javascript"></script>
+		<script src="js/form.js" type="text/javascript"></script>
+
+		<script>
+			document.getElementById('menu').addEventListener("click", function(event){
+			  event.preventDefault()
+			});
+		</script>
+	</body>
+</html>	

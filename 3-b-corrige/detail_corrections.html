@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Corrections d'exercices - Exercice blanc n°3 - Certification « Développer des sites web accessibles et conformes au RGAA » - Access42</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../3-a-exercice/css/styles_instructions.css" media="all" />
+</head>
+
+<body>
+    <div class="a42-layout">
+
+        <header role="banner" class="a42-header">
+            <div class="a42-header_in inside">
+                <p id="logo">
+                    <a href="https://access42.net/">
+                        <svg class="a42-main-logo" role="img" aria-label="Access42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 43" xml:space="preserve" width="133" height="99">
+								<title>Access42</title>
+								<g>
+									<g>
+										<path class="st0" d="M43.1,25.5c-1.5,0-3-0.5-4.1-1.3c2.4-2.4,3.8-5.8,3.8-9.4c0-7.5-6.1-13.6-13.6-13.6c-3.3,0-6.3,1.2-8.7,3.1
+										c-1.4-1.1-3.3-1.8-5.3-1.8V4c1.5,0,3,0.5,4.1,1.3c-2.4,2.4-3.8,5.8-3.8,9.4c0,7.5,6.1,13.6,13.6,13.6c3.3,0,6.3-1.2,8.7-3.1
+										c1.4,1.1,3.3,1.8,5.3,1.8V25.5z M17.1,14.8c0-3.3,1.3-6.2,3.4-8.4c1.1,1.2,1.7,2.9,1.7,4.6v2c0,4.4,3.4,8.1,7.8,8.5v1.8h1.5v-6.6
+										h-1.5V20c-3.5-0.4-6.2-3.4-6.2-7v-2c0-2.2-0.8-4.1-2.2-5.7c2.1-1.7,4.7-2.6,7.5-2.6c6.7,0,12.1,5.4,12.1,12.1
+										c0,3.3-1.3,6.2-3.4,8.4c-1.1-1.2-1.7-2.9-1.7-4.6v-2c0-4.7-3.8-8.5-8.5-8.5h-0.8v4.8h1.5V9.6c3.5,0.4,6.2,3.4,6.2,7v2
+										c0,2.2,0.8,4.1,2.2,5.7c-2.1,1.7-4.7,2.6-7.5,2.6C22.5,26.9,17.1,21.4,17.1,14.8z"/>
+										<g>
+											<g>
+												<path class="st0" d="M3.5,38.9l-1,2.8H1l3.5-9.5H6l3.5,9.5H8l-1-2.8H3.5z M5.3,33.7l-1.3,3.9h2.6L5.3,33.7z"/>
+												<path class="st0" d="M15.7,36.5c-0.3-0.3-1-0.8-1.9-0.8c-1.3,0-2.2,1-2.2,2.4c0,1.4,1,2.4,2.3,2.4c0.9,0,1.6-0.5,1.9-0.8
+												l0.4,1.2c-0.4,0.3-1.2,0.9-2.4,0.9c-2.2,0-3.7-1.6-3.7-3.7c0-2.1,1.6-3.7,3.7-3.7c1.2,0,2,0.5,2.4,0.9L15.7,36.5z"/>
+												<path class="st0" d="M22.5,36.5c-0.3-0.3-1-0.8-1.9-0.8c-1.3,0-2.2,1-2.2,2.4c0,1.4,1,2.4,2.3,2.4c0.9,0,1.6-0.5,1.9-0.8
+												l0.4,1.2c-0.4,0.3-1.2,0.9-2.4,0.9c-2.2,0-3.7-1.6-3.7-3.7c0-2.1,1.6-3.7,3.7-3.7c1.2,0,2,0.5,2.4,0.9L22.5,36.5z"/>
+												<path class="st0" d="M27.2,34.4c2.2,0,3.4,1.5,3.4,3.7c0,0.1,0,0.2,0,0.4h-5.4c0,1.3,0.9,2.1,2.2,2.1c1.1,0,1.7-0.6,2-1l1,0.7
+												c-0.3,0.6-1.3,1.6-3,1.6c-2.2,0-3.7-1.6-3.7-3.7C23.7,35.9,25.2,34.4,27.2,34.4z M29.1,37.4c-0.1-1.2-0.9-1.8-1.9-1.8
+												s-1.8,0.7-1.9,1.8H29.1z"/>
+												<path class="st0" d="M32.2,39.7c0.3,0.5,0.8,0.9,1.7,0.9c0.6,0,1.1-0.3,1.1-0.9c0-1.4-3.5-0.9-3.5-3.3c0-1.3,1.1-2,2.4-2
+												c1.3,0,2,0.8,2.3,1.3l-1,0.7c-0.2-0.3-0.6-0.8-1.4-0.8c-0.5,0-1,0.3-1,0.8c0,1.4,3.5,0.8,3.5,3.3c0,1.3-1.1,2.2-2.6,2.2
+												c-1.4,0-2.2-0.8-2.6-1.4L32.2,39.7z"/>
+												<path class="st0" d="M38,39.7c0.3,0.5,0.8,0.9,1.7,0.9c0.6,0,1.1-0.3,1.1-0.9c0-1.4-3.5-0.9-3.5-3.3c0-1.3,1.1-2,2.4-2
+												c1.3,0,2,0.8,2.3,1.3l-1,0.7c-0.2-0.3-0.6-0.8-1.4-0.8c-0.5,0-1,0.3-1,0.8c0,1.4,3.5,0.8,3.5,3.3c0,1.3-1.1,2.2-2.6,2.2
+												c-1.4,0-2.2-0.8-2.6-1.4L38,39.7z"/>
+												<path class="st0" d="M43,38.2l4.1-6.1h1.7V38H50v1.3h-1.2v2.3h-1.5v-2.3H43V38.2z M47.3,38v-4.1L44.6,38H47.3z"/>
+												<path class="st0" d="M51,41.1c0-2.7,4.4-4.2,4.4-6.3c0-0.8-0.5-1.4-1.5-1.4c-0.9,0-1.4,0.6-1.6,1.3L51,34.2
+												c0.2-0.9,1-2.3,2.9-2.3c1.8,0,3,1.1,3,2.8c0,2.7-3.9,4.1-4.1,5.6H57v1.3h-6V41.1z"/>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+                    </a>
+                </p>
+                <h1 class="a42-main-title"><strong>Corrections d'exercices</strong> <span class="a42-main-title_desc">Exercice blanc n°3<br /> Certification «&nbsp;Développer des sites web accessibles et conformes au RGAA&nbsp;»</span></h1>
+            </div>
+        </header>
+
+        <nav role="navigation">
+            <div class="inside">
+                <ul>
+                    <li><a href="#exo1">Exercice 1</a></li>
+                    <li><a href="#exo2">Exercice 2</a></li>
+                    <li><a href="#exo3">Exercice 3</a></li>
+                    <li><a href="#exo4">Exercice 4</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="a42-main" role="main">
+            <section class="a42-ml-welcome a42-contrib">
+                <div class="a42-narrow a42-block">
+                    
+                    <article>
+
+                        <h2 id="exo1" tabindex="-1">Exercice 1&nbsp;: Structure de la page</h2>
+
+                        <h3>Structure HTML5 pertinente</h3>
+
+                        <ul>
+                            <li>Un élément <code>&lt;header&gt;</code> est ajouté autour de la zone d'en-tête.</li>
+                            <li>Des éléments <code>&lt;nav&gt;</code> sont ajoutés autour du ou des lien(s) d'accès rapide et autour du menu de navigation.</li>
+                            <li>Un élément <code>&lt;main&gt;</code> est ajouté autour de la zone de contenu principal.</li>
+                            <li>Optionnellement, un élément <code>&lt;aside&gt;</code> est ajouté autour de la zone &laquo;&nbsp;Voir aussi&nbsp;&raquo; (cet élément aurait pu être inclu directement dans l'élément <code>&lt;main&gt;</code>).</li>
+                            <li>Un élément <code>&lt;footer&gt;</code> est ajouté autour de la zone de pied de page.</li>
+                        </ul>
+                        
+                        <h3>Éléments de navigation interne</h3>
+                        <h3>Landmarks</h4>
+                        <ul>
+                            <li>Un <code>role="banner"</code> est défini sur l'élément <code>&lt;header&gt;</code>.</li>
+                            <li>Un <code>role="search"</code> est défini sur la <code>&lt;div&gt;</code> ou sur le <code>&lt;form&gt;</code> contenant le champ de recherche.</li>
+                            <li>Des <code>role="navigation"</code> sont définis sur les éléments <code>&lt;nav&gt;</code>.<br>
+                            Pas obligatoire mais recommandé&nbsp;: des propriétés <code>aria-label</code> sont également définies sur ces éléments afin de les nommer. Par exemple&nbsp;:
+                            <code>aria-label="Accès rapide"</code> et <code>aria-label="Menu principal"</code>.</li>
+                            <li>Un <code>role="main"</code> est défini sur l'élément <code>&lt;main&gt;</code>.</li>
+                            <li>Un <code>role="complementary"</code> est défini sur l'élément <code>&lt;aside&gt;</code> s'il existe.</li>
+                            <li>Un <code>role="contentinfo"</code> est défini sur l'élément <code>&lt;footer&gt;</code>.</li>
+                        </ul>
+
+                        <h4>Liens d'accès rapide</h4>
+                        <ul>
+                            <li>Au moins un lien (ancre) est ajouté au début de la page dans le code HTML et mène vers le contenu principal.</li>
+                        </ul>
+
+                    </article>
+
+                    <hr />
+
+                    <article>
+
+                        <h2 id="exo2" tabindex="-1">Exercice 2&nbsp;: Contenu</h2>
+
+                        <h3>Éléments de contenu</h3>
+
+                        <h4>Titres</h4>
+                        <ul>
+                            <li>Un <code>&lt;h3&gt;</code> est ajouté sur les textes&nbsp;: «&nbsp;Pas de ROI sur l'optimisation&nbsp;» et «&nbsp;Des vitesses d'accès inchangées&nbsp;».</li>
+                            <li>Un <code>&lt;h2&gt;</code> est ajouté sur le texte  «&nbsp;Votez pour le logiciel le plus gourmand !&nbsp;».</li>
+                            <li>Un <code>&lt;h1&gt;</code> est ajouté sur le texte «&nbsp;La loi de Moore&nbsp;» dans la modale.</li>
+                        </ul>
+
+                        <h4>Listes</h4>
+                        <ul>
+                            <li>Une liste <code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code> est utilisée pour structurer les liens du menu de navigation.</li>
+                            <li>Une liste <code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code> est utilisée pour structurer les liens de la section «&nbsp;Voir aussi&nbsp;».</li>
+                            <li>Une liste <code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code> est utilisée pour structurer les liens des réseaux sociaux en pied de page.</li>
+                        </ul>
+
+                        <h4>Images</h4>
+                        <ul>
+                            <li>L'attribut <code>alt="vue macro d'un circuit intégré"</code> est vidé pour laisser un <code>alt=""</code> uniquement, l'image étant purement décorative, elle doit être ignorée par les technologies d'assistance.</li>
+                            <li>La structure <code>&lt;figure&gt;</code>/<code>&lt;figcaption&gt;</code> avec ses propriétés ARIA associées est utilisée autour de l'image <code>loi-moore.gif</code> et sa légende dans la fenêtre modale. En effet, cette image est une image légendée car le texte adjacent apporte des informations sur l'image (copyright).</li>
+                        </ul>
+
+                        <h4>Tableau</h4>
+                        <ul>
+                            <li>Un texte «&nbsp;Résultats des votes&nbsp;» est ajouté  directement après la balise <code>&lt;table&gt;</code> ouvrante, dans un élément <code>&lt;caption&gt;</code>.</li>
+                            <li>Des éléments <code>&lt;th&gt;</code> remplacent les <code>&lt;td&gt;</code> de la première ligne et optionnellement de la première colonne du tableau.<br>
+                            Si des éléments <code>&lt;th&gt;</code> sont utilisés dans la première colonne, alors des attributs <code>scope</code> sont ajoutés sur tous les éléments <code>&lt;th&gt;</code>
+                            du tableau (avec pour valeurs&nbsp;: <code>col</code> dans la première ligne, <code>row</code> dans la première colonne).</li>
+                        </ul>
+
+                        <h4>Liens</h4>
+                        <ul>
+                            <li>Ajout d'un title sur chacun des deux liens «&nbsp;En savoir plus&nbsp;». En effet, ces liens partagent le même contexte. Ce sont donc des liens identiques qui mènent vers des pages différentes. Il est nécessaire de les différencier, par exemple en ajoutant un attribut title qui reprend le nom visible avec une information complémentaire&nbsp;: «&nbsp;En savoir plus sur le syndrome de l'obésiciel&nbsp;» et «&nbsp;En savoir plus sur la lenteur ressentie par l'utilisateur&nbsp;».</li>
+                            <li>En pied de page, l'intitulé des liens des réseaux sociaux est donné en donnant une alternative aux images <code>svg</code>. Pour une correction complète&nbsp;: 
+                                <ul>
+                                    <li>ajout du <code>role="img"</code> sur chaque balise <code>&lt;svg&gt;</code>&nbsp;;</li>
+                                    <li>ajout d'une propriété <code>aria-label</code> sur chaque balise <code>&lt;svg&gt;</code>&nbsp;&nbsp;: compter twitter, compte linkedin, envoyer un mail etc.</li>
+                                </ul>   
+                            </li>
+                        </ul>
+
+                        <h3>Information par la couleur</h3>
+                        <p>Le lien de la page en cours de consultation est identifié dans le menu de navigation («&nbsp;Loi de Wirth&nbsp;»).</p>
+                        <p>Il n'y a pas de problèmes pour les personnes malvoyantes, puisque l'inversion des couleurs par rapport aux liens inactifs (comme «&nbsp;Loi de Murphy&nbsp;» par exemple), équivaut à un changement de forme. Une personne malvoyante pourra donc percevoir la différence entre le lien actif et les autres.</p>
+                        <p>On ajoute par contre un <code>title</code> sur le lien pour ajouter l'information pour les personnes aveugles naviguant avec un lecteur d'écran. Attention, le <code>title</code> doit toujours reprendre le nom accessible du lien&nbsp;: <code>title="Loi de Wirth (page active)"</code></p>
+
+                    </article>
+                    
+                    <hr />
+
+                    <article>
+
+                        <h2 id="exo3" tabindex="-1">Exercice 3&nbsp;: Formulaires</h2>
+
+                        <h3>Regroupements</h3>
+                        <ul>
+                            <li>Le texte «&nbsp;Quels sont les logiciels les plus gourmands selon-vous&nbsp;?&nbsp;» et les cases à cocher sont regroupés dans un élément <code>&lt;fieldset&gt;</code>.</li>
+                            <li>Un élément <code>&lt;legend&gt;</code> remplace le <code>&lt;p&gt;</code> autour du texte «&nbsp;Quels sont les logiciels les plus gourmands selon-vous&nbsp;?&nbsp;».</li>
+                            <li>Une correction similaire est appliquée pour «&nbsp;Quels sont les logiciels les moins gourmands selon-vous&nbsp;?&nbsp;».</li>
+                        </ul>
+
+                        <h3>Étiquettes</h3>
+                        <ul>
+                            <li>Au niveau du moteur de recherche&nbsp;: ajout d'un attribut <code>for="search"</code> sur la balise <code>&lt;label&gt;</code> pour donner un nom accessible  au champ de saisie.</li> 
+                            <li>Pour tous les champs (texte, zone de texte et case à cocher) du formulaire «&nbsp;Votez pour le logiciel le plus gourmand&nbsp;!&nbsp;», des étiquettes sont définies au moyen d'éléments <code>&lt;label for=&quot;id&quot;&gt;</code>&nbsp;;</li>
+                        </ul>
+
+                        <h3>Identifications de données personnelles</h3>
+                        <ul>
+                            <li>Des attributs <code>autocomplete</code> sont ajoutés sur les champs qui collectent des données personnelles&nbsp;:
+                                <ul>
+                                    <li>Nom&nbsp;: <code>autocomplete=&quot;family-name&quot;</code></li>
+                                    <li>Prénom&nbsp;: <code>autocomplete=&quot;given-name&quot;</code></li>
+                                    <li>Adresse e-mail&nbsp;: <code>autocomplete=&quot;email&quot;</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>Intitulé des boutons</h3>
+                        <ul>
+                            <li>La propriété <code>aria-label</code> du bouton «&nbsp;Voter maintenant&nbsp;!&nbsp;», est supprimée. Son contenu («&nbsp;Envoyer&nbsp;») ne reprenait pas au moins le nom visible («&nbsp;Voter maintenant&nbsp;!&nbsp;»).</li>
+                        </ul>
+
+                        <h3>Aides à la saisie</h3>
+                        <p>Pour le formulaire «&nbsp;Votez pour le logiciel le plus gourmand&nbsp;!&nbsp;»&nbsp;: </p>
+                        <ul>
+                            <li>Champs obligatoires&nbsp;:
+                                <ul>
+                                    <li>Un astérisque est ajouté dans l'étiquette du champ «&nbsp;Nom&nbsp;» qui est obligatoire mais qui n'est pas identifié visuellement (uniquement par <code>aria-required</code>)&nbsp;;</li>
+                                    <li>Un texte visible «&nbsp;* champs obligatoires&nbsp;» est ajouté avant le début du formulaire.</li>
+                                </ul>
+                            </li>
+                            <li>Le format de saisie présent dans la page «&nbsp;format&nbsp;: nom@domaine.com&nbsp;» et relié au champ «&nbsp;adresse email&nbsp;» par une propriété <code>aria-describedby</code> sur le champ.</li>
+                            <li>Le message d'erreur du champ email est modifié pour afficher un exemple réel de saisie «&nbsp;Saisissez un email valide, par exemple jean@dupont.fr&nbsp;» (le code JavaScript qui gère cet élément est dans le fichier <code>js/form.js</code>).</p>
+                        </ul>
+
+                    </article>
+
+                    <hr />
+
+                    <article>
+
+                        <h2 id="exo4" tabindex="-1">Exercice 4&nbsp;: Javascript et ARIA</h2>
+
+                        <h3>Mise à jour dynamique de contenu</h3>
+                        <p>Au niveau du moteur de recherche&nbsp;: les propriétés <code>aria-live="polite"</code> et <code>aria-atomic="true"</code>sont ajoutées directement dans la page HTML, sur l'élément qui contient les résultats de recherche (<code>#results-search-total</code>).</p>
+
+                        <h3 lang="en">Disclosure</h3>
+                        <p>Bouton «&nbsp;Voir les derniers résultats&nbsp;»&nbsp;:</p>
+                        <p>Les modifications ont été faites dans le fichier <code>js/disclosure.js</code>. Voir le script commenté.</p>
+                        <p>Les propriétés <code>aria-expanded</code> et optionnellement <code>aria-controls</code> sont ajoutées et le code permet de modifier les valeurs dynamiquement. </p>
+                        <p>Attention, garantir la présence de <code>aria-expanded</code> avec la valeur <code>false</code> dès le chargement de la page (en l'absence d'interaction de l'utilisateur) pour garantir l'accès à l'état replié dès le début</p>
+
+                        <h3>Fenêtre modale</h3>
+                        <p>Le bouton «&nbsp;La loi de Moore en 2 secondes&nbsp;» gère une fenêtre modale.</p>
+                        <p>Les propriétés suivantes sont ajoutées sur l'élément <code>#modal-content</code> directement dans le HTML&nbsp;:</p>
+                        <ul>
+                            <li><code>role=&quot;dialog&quot;</code></li>
+                            <li><code>aria-labelledby=&quot;modal-title&quot;</code></li>
+                        </ul>
+
+                        <p>Les autres modifications ont été faites dans le fichier <code>js/dialog.js</code>. Voir le script commenté.</p>
+                        <ul>
+                            <li>À l'ouverture de la modale, on force la reprise de focus sur le bouton de fermeture de la fenêtre modale&nbsp;: <code>btnClose.focus();</code> dans la fonction <code>btnOpen.addEventListener</code>        </li>
+                            <li>À la fermeture de la modale, on force la reprise de focus sur le bouton d'ouverture dans la page «&nbsp;La loi de Moore en 2 secondes&nbsp;»)&nbsp;:  <code>btnOpen.focus();</code> dans la fonction <code>endFunction()</code>.</li>
+                        </ul>
+
+                        <h3>Contrôle de saisie de formulaire</h3>
+
+                        <p>Les modifications ont été faites dans le fichier <code>js/form.js</code>. Voir le script commenté.</p>
+                        <p>On ajoute la propriété <code>aria-describedby</code> aux champs qui affichent des erreurs afin de lier les messages d'erreurs aux champs&nbsp;: <code>obj.setAttribute( 'aria-describedby', label );</code>.</p>
+
+                        <h3>Envoi du formulaire avec succès</h3>
+
+                        <ul>
+                            <li>Après la soumission du formulaire complet, sans erreurs, la méthode <code>focus()</code> est utilisée pour déplacer le focus de l'utilisateur sur le texte de succès ajouté également par le script&nbsp;: <code>success.focus();</code>.</li>
+                            <li>Pour que la reprise de focus soit fonctionnelle, on ajoute une propriété <code>tabindex="-1"</code> au conteneur visé par la reprise de focus.</li>
+                        </ul>
+                        
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+</body>
+
+</html>
