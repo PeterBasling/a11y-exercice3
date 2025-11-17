@@ -14,11 +14,19 @@
 	<body class="a42-as"><!-- ajouter la classe .a42-as-tools pour passer la page en mode « outils » -->
 		<div id="screen" class="a42-wrapper">
 
-			<div class="a42-main-header a42-bgcolor-c4">
+			<!-- Exercice 1 : La zone d'en-tête est implémentée dans un élément <header>, affecté du rôle "banner" -->
+			<header role="banner" class="a42-main-header a42-bgcolor-c4">
 				<div class="a42-container">
 					<div class="a42-main-tools a42-layout-alpha">
 						<div class="a42-main-tools_alpha">
-
+							<!-- Exercice 1 : La zone de navigation par lien d'accès rapide est implémentée dans un élément <nav>, affecté du rôle "navigation".
+                			Lorsque plusieurs zones de navigation existent dans la page, il est préférable de les distinguer en les nommant au moyen d'une propriété aria-label. -->
+							<nav role="navigation" aria-label="Accès rapide" class="a42-help a42-list-reset a42-list-inline a42-list-inline-fancy">
+								<!-- Exercice 1 : Le lien d'accès rapide est implémenté en haut de page. Il pointe vers la zone de contenu principal, généralement le <main>.
+                              Il peut être masqué par défaut et n'apparaitre qu'à la prise de focus.
+                              -->
+								<span><a href="#main" class="a42-link-reset">Aller au contenu</a></span>
+							</nav>
 						</div>
 					</div>
 
@@ -29,22 +37,24 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</header>
 
 			<div class="a42-main-container">
 				<div class="a42-container a42-clear">
 					<div id="a42-container-bis" class="a42-container-bis a42-clear">
 
 						<div class="a42-page-sidebar" id="sidebar">
-							<div class="a42-toc-container">
+							<!-- Exercice 1 : La zone de navigation principale est implémentée dans un élément <nav>, affecté du rôle "navigation".-->
+							<nav role="navigation" class="a42-toc-container" aria-label="Menu principal">
 								<div id="menu" class="a42-toc">
 									<p class="current-page a42-bgcolor-c5"><a href="lois/wirth.html">Loi de Wirth</a></p>
 									<p><a href="lois/murphy.html">Loi de Murphy</a></p>
 									<p><a href="lois/occam.html">Loi de Occam</a></p>
 									<p><a href="lois/linus.html">Loi de Linus</a></p>
 								</div>
-							</div>
-							<div>
+							</nav>
+							<!-- Exercice 1 : La zone de recherche est affectée du rôle "search". -->
+							<div role="search">
 								<div class="a42-form-big">
 									<p style="margin-bottom:0">
 										<label>Saisir les termes à rechercher</label>
@@ -58,8 +68,12 @@
 								</div>
 							</div>
 						</div>
-							
-						<div id="main" class="a42-page-content" tabindex="-1">
+
+						<!-- Exercice 1 : La zone de contenu principal est implémentée dans un élément <main>, affecté du rôle "main".
+		                C'est cet élément qui est la cible du lien d'accès rapide.
+			            Un attribut tabindex="-1" permet de synchroniser la reprise du focus avec la tabulation pour certains navigateur.
+			            -->
+						<main role="main" id="main" class="a42-page-content" tabindex="-1">
 							<p><b>La loi de Wirth est une loi empirique formulée par Niklaus Wirth en 1995, selon laquelle <q>les programmes ralentissent plus vite que le matériel accélère</q>. Ou bien : le nombre d'instructions nécessaires à l'interprétation de programmes plus sophistiqués demande des ordinateurs plus rapides.</b></p>
 
 							<img src="img/Image-header-servicio-hardware.jpg" alt="vue macro d'un circuit intégré" style="margin-bottom:15px"/>
@@ -254,10 +268,11 @@
 								</div>
 							</div>
 
-						</div>
+						</main>
 					</div>
-						
-					<div class="a42-page-footer">
+
+					<!-- Exercice 1 : La zone "Voir aussi" est implémentée dans un élément <aside>, affecté du rôle "complementary". Cette implémentation n'est pas obligatoire, le contenu de ce bloc aurait pu également être intégré directement dans la balise <main> -->
+					<aside role="complementary" class="a42-page-footer">
 						<div class="a42-user-choices a42-user-choices-fixed">
 							<h2>Voir aussi</h2>
 							<div class="a42-list-reset a42-user-choices_list">
@@ -296,11 +311,12 @@
 								</span>
 							</div>
 						</div>
-					</div>
+					</aside>
 				</div>
 			</div>
 
-			<div class="a42-main-footer">
+			<!-- Exercice 1 : La zone de pied de page est implémentée dans un élément <footer>, affecté du rôle "contentinfo". -->
+			<footer class="a42-main-footer" role="contentinfo">
 				<div class="a42-container">
 					<div class="a42-main-footer_col a42-credits">
 						<div class="a42-contact">
@@ -341,7 +357,7 @@
 						
 					</div>
 				</div>
-			</div>
+			</footer>
 
 		</div>
 
