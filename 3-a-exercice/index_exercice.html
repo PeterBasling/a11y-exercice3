@@ -46,12 +46,14 @@
 						<div class="a42-page-sidebar" id="sidebar">
 							<!-- Exercice 1 : La zone de navigation principale est implémentée dans un élément <nav>, affecté du rôle "navigation".-->
 							<nav role="navigation" class="a42-toc-container" aria-label="Menu principal">
-								<div id="menu" class="a42-toc">
-									<p class="current-page a42-bgcolor-c5"><a href="lois/wirth.html">Loi de Wirth</a></p>
-									<p><a href="lois/murphy.html">Loi de Murphy</a></p>
-									<p><a href="lois/occam.html">Loi de Occam</a></p>
-									<p><a href="lois/linus.html">Loi de Linus</a></p>
-								</div>
+								<!-- Exercice 2 : Les liens du menu de navigation sont structurés au moyen d'une liste -->
+								<ul id="menu" class="a42-toc">
+									<!--  Exercice 2 : L'information de page active transmise par la couleur est également transmise au moyen d'un attribut title. -->
+									<li class="current-page a42-bgcolor-c5"><a href="lois/wirth.html" title="Loi de Wirth (page  active)">Loi de Wirth</a></li>
+									<li><a href="lois/murphy.html">Loi de Murphy</a></li>
+									<li><a href="lois/occam.html">Loi de Occam</a></li>
+									<li><a href="lois/linus.html">Loi de Linus</a></li>
+								</ul>
 							</nav>
 							<!-- Exercice 1 : La zone de recherche est affectée du rôle "search". -->
 							<div role="search">
@@ -76,8 +78,8 @@
 						<main role="main" id="main" class="a42-page-content" tabindex="-1">
 							<p><b>La loi de Wirth est une loi empirique formulée par Niklaus Wirth en 1995, selon laquelle <q>les programmes ralentissent plus vite que le matériel accélère</q>. Ou bien : le nombre d'instructions nécessaires à l'interprétation de programmes plus sophistiqués demande des ordinateurs plus rapides.</b></p>
 
-							<img src="img/Image-header-servicio-hardware.jpg" alt="vue macro d'un circuit intégré" style="margin-bottom:15px"/>
-
+							<!-- Exercice 2 : Cette image qui ne transmet aucune information est ignorée des technologies d'assistance grâce à un attribut alt vide. -->
+							<img src="img/Image-header-servicio-hardware.jpg" alt="" style="margin-bottom:15px"/>
 							<h2>Explication</h2>
 
 							<p>En informatique, la loi de Wirth est un corollaire de la loi de Moore.</p>
@@ -86,17 +88,20 @@
 
 							<p>Alors que le matériel devient de plus en plus rapide, la loi de Wirth montre que les programmes n'accélèrent pas pour autant. Au contraire, ils deviennent de plus en plus gros et lents, les développeurs justifiant cette lenteur excessive comme compensée par la loi de Moore !</p>
 
-							<p><a href="https://interstices.info/le-syndrome-de-lobesiciel-des-applications-energivores/">En savoir plus</a></p>
+							<!-- Exercice 2 : Les deux liens "En savoir plus" partagent le même contexte. Ce sont donc des liens identiques qui mènent vers des pages différentes. Il est nécessaire de les différencier, par exemple en ajoutant un attribut title qui reprenda le nom visible avec une information complémentaire : "En savoir plus sur le syndrome de l'obésiciel" et "En savoir plus sur la lenteur ressentie par l'utilisateur" -->
+							<p><a href="https://interstices.info/le-syndrome-de-lobesiciel-des-applications-energivores/" title="En savoir plus sur le syndrome de l'obésiciel">En savoir plus</a></p>
 
 							<p><strong>La loi de Wirth devient ainsi une excuse à la production d'obésiciels.</strong> En effet, les programmeurs prennent principalement en compte le ressenti de l'utilisateur plutôt que l'efficacité réelle. <b>Les logiciels ont donc une lenteur ressentie constante bien que la puissance processeur de leur matériel augmente.</b></p>
 
-							<p><a href="https://tempsdereaction.wordpress.com/2018/05/28/lenteur-ressentie/">En savoir plus</a></p>
+							<p><a href="https://tempsdereaction.wordpress.com/2018/05/28/lenteur-ressentie/" title="En savoir plus sur la lenteur ressentie par l'utilisateur">En savoir plus</a></p>
 
-							<p class="a42-title-gamma">Pas de ROI sur l'optimisation</p>
+							<!-- Exercice 2 : Ce texte est un titre de niveau 3 -->
+							<h3>Pas de ROI sur l'optimisation</h3>
 
 							<p>D'un point de vue financier, une société développant un logiciel n'a que peu d'intérêt à faire travailler des codeurs sur de l'optimisation car le retour sur investissement est faible (comme les utilisateurs sont habitués à ces lenteurs, bien peu refusent d'acheter un logiciel pour cette cause de lenteur).</p>
 
-							<p class="a42-title-gamma">Des vitesses d'accès inchangées</p>
+							<!-- Exercice 2 : Ce texte est un titre de niveau 3 -->
+							<h3>Des vitesses d'accès pourtant inchangées</h3>
 
 							<p>Il faut comprendre aussi que si la puissance de calcul a été démultipliée, la vitesse de communication vers l'extérieur n'a que très peu augmenté. Les accès disques durs, sur des disques durs « classiques » à plateaux et têtes de lectures magnétiques, peuvent représenter une grosse partie des latences en bureautique. L'arrivée des mémoires de stockage à mémoire flash (SSD) change cet état de fait.</p>
 
@@ -114,7 +119,8 @@
 								<li>Loi de Metcalfe : la valeur d'un réseau varie selon le carré du nombre de ses nœuds.</li>
 							</ol>
 
-							<p class="a42-title-beta">Votez pour le logiciel le plus gourmand !</p>
+							<!-- Exercice 2 : Ce texte est un titre de niveau 2 -->
+							<h2>Votez pour le logiciel le plus gourmand !</h2>
 
 							<div id="msg-ok"></div>
 
@@ -226,41 +232,45 @@
 							<div class="onoff">
 								<button class="a42-toggle-button">Voir les derniers résultats</button>
 								<div class="a42-toggle-content is-closed" id="table1">
+									<!-- Exercice 2 : Un titre est ajouté dans un élément <caption>. -->
 									<table class="a42-table-fixed">
+										<caption>Résultats des votes</caption>
 										<thead>
-											<tr>
-												<td></td>
-												<td>Votes pour &laquo;&nbsp;logiciel le plus gourmand&nbsp;&raquo;</td>
-												<td>Votes pour &laquo;&nbsp;logiciel le moins gourmand&nbsp;&raquo;</td>
-											</tr>
+										<tr>
+											<!-- Exercice 2 : Les en-têtes de colonnes sont implémentées dans des éléments <th>, affectés de l'attribut scope="col" -->
+											<td></td>
+											<th scope="col">Votes pour &laquo;&nbsp;logiciel le plus gourmand&nbsp;&raquo;</th>
+											<th scope="col">Votes pour &laquo;&nbsp;logiciel le moins gourmand&nbsp;&raquo;</th>
+										</tr>
 										</thead>
 										<tr>
-											<td>Adobe Reader</td>
+											<!-- Exercice 2 : Les en-têtes de lignes sont implémentées dans des éléments <th>, affectés de l'attribut scope="row" -->
+											<th scope="row">Adobe Reader</th>
 											<td>10</td>
 											<td>156</td>
 										</tr>
 										<tr>
-											<td>Microsoft Word</td>
+											<th scope="row">Microsoft Word</th>
 											<td>989</td>
 											<td>34</td>
 										</tr>
 										<tr>
-											<td>Microsoft Front Page</td>
+											<th scope="row">Microsoft Front Page</th>
 											<td>900</td>
 											<td>3</td>
 										</tr>
 										<tr>
-											<td>Microsoft Publisher</td>
+											<th scope="row">Microsoft Publisher</th>
 											<td>543</td>
 											<td>54</td>
 										</tr>
 										<tr>
-											<td>Apple Final cut pro</td>
+											<th scope="row">Apple Final cut pro</th>
 											<td>800</td>
 											<td>24</td>
 										</tr>
 										<tr>
-											<td>Thunderbird</td>
+											<th scope="row">Thunderbird</th>
 											<td>240</td>
 											<td>80</td>
 										</tr>
@@ -275,8 +285,9 @@
 					<aside role="complementary" class="a42-page-footer">
 						<div class="a42-user-choices a42-user-choices-fixed">
 							<h2>Voir aussi</h2>
-							<div class="a42-list-reset a42-user-choices_list">
-								<span class="a42-user-choices_item">
+							<!-- Exercice 2 : Les liens de la section "Voir aussi" sont structurés au moyen d'une liste -->
+							<ul class="a42-list-reset a42-user-choices_list">
+								<li class="a42-user-choices_item">
 									<a href="https://fr.wikipedia.org/wiki/Loi_de_Moore" class="a42-btn a42-btn-skeleton">
 										<span class="a42-btn-flex">
 											<span class="a42-btn-flex_content">
@@ -286,9 +297,9 @@
 											</span>
 										</span>
 									</a>
-								</span><!--
-								--><span class="a42-user-choices_item">
-									<a href="https://fr.wikipedia.org/wiki/Loi_de_Koomey" class="a42-btn a42-btn-skeleton--focus">
+								</li><!--
+								--><li class="a42-user-choices_item">
+								<a href="https://fr.wikipedia.org/wiki/Loi_de_Koomey" class="a42-btn a42-btn-skeleton--focus">
 										<span class="a42-btn-flex">
 											<span class="a42-btn-flex_content">
 												<span class="a42-btn-flex_child">
@@ -297,19 +308,19 @@
 											</span>
 										</span>
 									</a>
-								</span><!--
-								--><span class="a42-user-choices_item">
+								</li><!--
+									--><li class="a42-user-choices_item">
 									<a href="https://fr.wikipedia.org/wiki/Singularit%C3%A9_technologique" class="a42-btn a42-btn-skeleton">
-										<span class="a42-btn-flex">
-											<span class="a42-btn-flex_content">
-												<span class="a42-btn-flex_child">
-													<b class="a42-btn_title">Singularité technologique</b>
+											<span class="a42-btn-flex">
+												<span class="a42-btn-flex_content">
+													<span class="a42-btn-flex_child">
+														<b class="a42-btn_title">Singularité technologique</b>
+													</span>
 												</span>
 											</span>
-										</span>
 									</a>
-								</span>
-							</div>
+								</li>
+							</ul>
 						</div>
 					</aside>
 				</div>
@@ -319,36 +330,38 @@
 			<footer class="a42-main-footer" role="contentinfo">
 				<div class="a42-container">
 					<div class="a42-main-footer_col a42-credits">
-						<div class="a42-contact">
-							<span>
+						<!-- Exercice 2 : Les liens des réseaux sociaux sont structurés au moyen d'une liste -->
+						<ul class="a42-contact">
+							<li>
+								<!-- Exercice 2 : Les noms accessibles des réseaux sociaux sont créés identifant les svg contenus dans chaque lien comme des images porteuses d'information : ajout du role="img" et d'un aria-label pertinent sur chaque svg. -->
 								<a href="https://twitter.com/">
-									<svg viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
+									<svg role="img" aria-label="Compte Twitter" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
 										<path d="m9.5 24a17.1 17.1 0 0 0 17.3-17.2 1.9 1.9 0 0 0 -.1-.8 11.8 11.8 0 0 0 3.1-3.2 14 14 0 0 1 -3.5 1 6.6 6.6 0 0 0 2.7-3.4 13.2 13.2 0 0 1 -3.9 1.5 6 6 0 0 0 -4.4-1.9 6.1 6.1 0 0 0 -6.1 6.1 5.9 5.9 0 0 0 .2 1.3 16.8 16.8 0 0 1 -12.5-6.3 6.2 6.2 0 0 0 -.8 3.1 5.8 5.8 0 0 0 2.7 5 5.4 5.4 0 0 1 -2.8-.8 6.1 6.1 0 0 0 4.9 6l-1.6.2h-1.2a6.3 6.3 0 0 0 5.7 4.2 12.4 12.4 0 0 1 -7.5 2.6h-1.5a17.4 17.4 0 0 0 9.3 2.6"/>
 									</svg>
 								</a>
-							</span><!--
-							--><span>
-								<a href="https://www.linkedin.com/">
-									<svg viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="m25.2 0h-20.4a1.8 1.8 0 0 0 -1.8 1.7v20.6a1.8 1.8 0 0 0 1.8 1.7h20.4a1.8 1.8 0 0 0 1.8-1.7v-20.6a1.8 1.8 0 0 0 -1.8-1.7zm-15.1 20.5h-3.5v-11.5h3.5zm-1.8-13.1a2 2 0 0 1 -2-2 2 2 0 0 1 2-2.1 2.1 2.1 0 0 1 2.1 2.1 2 2 0 0 1 -2.1 2zm15.2 13.1h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7h-3.5v-11.5h3.4v1.6a3.9 3.9 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5z" fill="#1d1d1b"/>
-									</svg>
-								</a>
-							</span>
-							<span>
-								<a href="http://eepurl.com/dgHY2b">
-									<svg xmlns="http://www.w3.org/2000/svg" width="29.1" height="21" viewBox="0 0 29.1 21" class="a42-icon-newsletter">
+							</li><!--
+							--><li>
+							<a href="https://www.linkedin.com/">
+								<svg role="img" aria-label="Compte LinkedIn" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
+									<path d="m25.2 0h-20.4a1.8 1.8 0 0 0 -1.8 1.7v20.6a1.8 1.8 0 0 0 1.8 1.7h20.4a1.8 1.8 0 0 0 1.8-1.7v-20.6a1.8 1.8 0 0 0 -1.8-1.7zm-15.1 20.5h-3.5v-11.5h3.5zm-1.8-13.1a2 2 0 0 1 -2-2 2 2 0 0 1 2-2.1 2.1 2.1 0 0 1 2.1 2.1 2 2 0 0 1 -2.1 2zm15.2 13.1h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7h-3.5v-11.5h3.4v1.6a3.9 3.9 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5z" fill="#1d1d1b"/>
+								</svg>
+							</a>
+						</li>
+							<li>
+								<a href="http://eepurl.com/dgHY2b" lang="en">
+									<svg role="img" aria-label="Compte Newsletter" xmlns="http://www.w3.org/2000/svg" width="29.1" height="21" viewBox="0 0 29.1 21" class="a42-icon-newsletter">
 										<g><g id="ae01af33-9b93-412d-8a0f-378d554b35aa" data-name="icon-newsletter"><path d="M21.2,5.2V0H20V1.1a13.1,13.1,0,0,1-9.1,4v7.7a12.6,12.6,0,0,1,9.1,4v1h1.2V12.7a3.9,3.9,0,0,0,3.2-3.8A3.7,3.7,0,0,0,21.2,5.2Zm0,6.3V6.4a2.6,2.6,0,0,1,2,2.5A2.6,2.6,0,0,1,21.2,11.5Z"></path><path d="M8.4,13.1H9.7V4.6H4.2A4.2,4.2,0,0,0,0,8.9a4.3,4.3,0,0,0,3.6,4.2l1.9,6.2a2.6,2.6,0,0,0,1.1,1.4,2.7,2.7,0,0,0,1.2.3h.7a2,2,0,0,0,1.4-1.4,2.7,2.7,0,0,0-.2-2.3A6.3,6.3,0,0,1,8.4,13.1Z"></path><rect x="26.1" y="8.3" width="3" height="1.21"></rect><rect x="24.4" y="4.2" width="3" height="1.21" transform="translate(4.2 19.7) rotate(-45)"></rect><rect x="25.3" y="11.4" width="1.2" height="3.03" transform="translate(-1.6 22.1) rotate(-45)"></rect></g></g>
 									</svg>
 								</a>
-							</span>
-							<span>
+							</li>
+							<li>
 								<a href="mailto:bonjour@access42.net">
-									<svg xmlns="http://www.w3.org/2000/svg">
-										 <path d="M 0.96367729,0.96367729 H 27.946643 V 20.787897 H 0.96367729 Z m 0,0 L 13.078478,13.078478 q 1.376681,1.101345 2.753363,0 L 27.946643,0.96367729 M 0.96367729,20.787897 10.875787,10.875787 m 7.158746,0 9.91211,9.91211" style="fill:none;stroke:#000000;stroke-width:1.92735457" />
+									<svg role="img" aria-label="Envoyer un email à Access42" xmlns="http://www.w3.org/2000/svg">
+										<path d="M 0.96367729,0.96367729 H 27.946643 V 20.787897 H 0.96367729 Z m 0,0 L 13.078478,13.078478 q 1.376681,1.101345 2.753363,0 L 27.946643,0.96367729 M 0.96367729,20.787897 10.875787,10.875787 m 7.158746,0 9.91211,9.91211" style="fill:none;stroke:#000000;stroke-width:1.92735457" />
 									</svg>
 								</a>
-							</span>
-						</div>
+							</li>
+						</ul>
 	 
 						<p class="a42-credits_title">
 							<b>Texte extrait et adapté de l'article &laquo;&nbsp;<a href="https://fr.wikipedia.org/wiki/Loi_de_Wirth">Loi de Wirth</a>&nbsp;&raquo; de l'encyclopédie Wikipédia</b>
@@ -364,7 +377,9 @@
 			<div id="modal-content" class="modal subscribe padding-top-120" aria-modal="true" tabindex="-1">
 				<div class="modal-dialog text-center">
 					<button class="close btn" id="btn-close-modal" aria-label="fermer"><i class="icon-close"></i></button>
-					<p class="a42-title-alpha">La loi de Moore</p>
+
+					<!-- Exercice 2 : Au sein d'une fenêtre modale, la hiérarchie des titres reprend au début puisque l'utilisateur entre dans un nouveau contexte de la page. Ce texte est dont un titre de niveau 1. -->
+					<h1 id="modal-title">La loi de Moore</h1>
 
 					<div class="a42-gallery-2cols">
 						<div>
@@ -373,10 +388,12 @@
 							<p>Cette augmentation exponentielle fut rapidement nommée « loi de Moore » ou, compte tenu de l'ajustement ultérieur, « première loi de Moore ».</p>
 						</div>
 						<div>
-							<div>
-								<img style="width:50%;margin:auto" alt="" src="img/loi-moore.gif" />
-								<p>Graphique publié dans le magazine « Electronics » en 1965 - ©Electronics </p>
-							</div>
+							<!-- Exercice 2 : Cette image est une image légendée car le texte adjacent apporte des informations sur l'image (copyright). Le pattern des images légendées est donc appliqué. L'image légendée est implémentée dans un élément <figure>, et sa légende dans un élément <figcaption>.
+                            Les propriétés role et aria-label assurent la bonne restitution par toutes les technologies d'assistance. -->
+							<figure role="group" aria-label="Graphique publié dans le magazine « Electronics » en 1965 - ©Electronics">
+								<img style="width:50%;margin:auto" alt="Graphique" src="img/loi-moore.gif" />
+								<figcaption>Graphique publié dans le magazine « Electronics » en 1965 - ©Electronics</figcaption>
+							</figure>
 						</div>
 					</div>
 
