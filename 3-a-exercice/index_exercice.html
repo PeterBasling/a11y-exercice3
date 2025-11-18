@@ -59,7 +59,8 @@
 							<div role="search">
 								<div class="a42-form-big">
 									<p style="margin-bottom:0">
-										<label>Saisir les termes à rechercher</label>
+										<!--  Exercice 3 : Ajout d'un attribut for="search" sur la balise <label> pour donner au champ de saisie un nom accessible-->
+										<label for="search">Saisir les termes à rechercher</label>
 										<input type="text" id="search" style="width:100%"/>
 									</p>
 									<button id="btn-search" class="a42-btn a42-btn-alpha a42-btn-alpha--ghost" style="width:100%"><span aria-hidden="true">🔍</span>Rechercher</button>
@@ -124,107 +125,98 @@
 
 							<div id="msg-ok"></div>
 
+							<!--  Exercice 3 :
+							Les étiquettes de tous les champs du formulaire sont définies au moyen d'éléments <label>, affectés d'attributs "for" dont la valeur correspond à l'id du champ.
+                            Les indications de champs obligatoires sont faites au moyen d'astérisques dans les étiquettes, et d'un texte visible précédent qui définit l'astérisque.
+                            Les propriétés aria-required sont donc non obligatoires mais sont exploitées par le script JS pour la gestion des erreurs (NE PAS LES SUPPRIMER). -->
 							<form action="/" class="a42-form-big" id="form" novalidate>
+								<p class="a42-required">* champs obligatoires</p>
 								<p>
-									<span>Prénom</span>
-									<input type="text" name="prenom" />
-								</p>
-								<p>
-									<span>Nom</span>
-									<input type="text" id="nom" name="user-name" aria-required="true" />
-									
-								</p>
-								<p>
-									<label>Adresse <span lang="en">email</span><span class="a42-required">*</span></label>
-									<input type="email" aria-required="true" id="user-email" name="user-email"/>
-								</p>
-								<span class="help-message" id="aide-mail"><sub><i>format : nomprenom@domain.com</i></sub></span>
+									<label for="prenom">Prénom</label>
 
+									<!--  Exercice 3 : Des propriétés autocomplete sont définies sur les champs de saisie Prénom, nom et adresse email. -->
+									<input type="text" id="prenom" autocomplete="given-name" name="prenom" />
+								</p>
+								<p>
+									<label for="nom">Nom <span class="a42-required">*</span></label>
+									<input type="text" id="nom" aria-required="true" autocomplete="family-name" name="user-name"/>
+
+								</p>
+								<p>
+									<label for="email">Adresse <span lang="en">email</span><span class="a42-required">*</span></label>
+									<!--  Exercice 3 : L'indication du format de saisie est liée au champ par la propriété aria-describedby. -->
+									<input type="email" id="email" name="user-email"  aria-required="true"  autocomplete="email" aria-describedby="aide-email"/>
+								</p>
+								<span class="help-message" id="aide-email"><sub><i>format : nomprenom@domain.com</i></sub></span>
 
 								<p>
-									<span>Laissez un commentaire</span>
+									<label for="message">Laissez un commentaire</label>
 									<textarea name="message" id="message" cols="30" rows="10"></textarea>
 								</p>
 
-								
-								<p class="a42-title-epsilon">Quels sont les logiciels les plus gourmands selon-vous&nbsp;?</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="plus"> 
-										Adobe Reader
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="plus"> 
-										Microsoft Word
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="plus"> 
-										Microsoft Front Page
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="plus"> 
-										Microsoft Publisher
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="plus"> 
-										Apple Final cut pro
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="plus"> 
-										Thunderbird
-									</label>
-								</p>
+								<!--  Exercice 3 : L'ensemble des cases à cocher est regroupé dans un élément <fieldset>.
+                                Le titre du regroupement est défini par l'élément <legend>. -->
+								<fieldset>
+									<legend>Quels sont les logiciels les plus gourmands selon-vous&nbsp;?</legend>
+									<p>
+										<input type="checkbox" id="adobe" name="plus">
+										<label for="adobe">Adobe Reader</label>
+									</p>
+									<p>
+										<input type="checkbox" id="word" name="plus">
+										<label for="word">Microsoft Word</label>
+									</p>
+									<p>
+										<input type="checkbox" id="frontpage" name="plus">
+										<label for="frontpage">Microsoft Front Page</label>
+									</p>
+									<p>
+										<input type="checkbox" id="publisher" name="plus">
+										<label for="publisher">Microsoft Publisher</label>
+									</p>
+									<p>
+										<input type="checkbox" id="finalcut" name="plus">
+										<label for="finalcut">Apple Final cut pro</label>
+									</p>
+									<p>
+										<input type="checkbox" id="thunderbird" name="plus">
+										<label for="thunderbird">Thunderbird</label>
+									</p>
+								</fieldset>
 
-								<p class="a42-title-epsilon">Quels sont les logiciels les moins gourmands selon-vous&nbsp;?</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="moins"> 
-										Adobe Reader
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="moins"> 
-										Microsoft Word
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="moins"> 
-										Microsoft Front Page
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="moins"> 
-										Microsoft Publisher
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="moins"> 
-										Apple Final cut pro
-									</label>
-								</p>
-								<p class="a42-checkbox-group">
-									<label>
-										<input type="checkbox" name="moins"> 
-										Thunderbird
-									</label>
-								</p>
+								<!--  Exercice 3 : L'ensemble des cases à cocher est regroupé dans un élément <fieldset>.
+                                Le titre du regroupement est défini par l'élément <legend>. -->
+								<fieldset>
+									<legend>Quels sont les logiciels les moins gourmands selon-vous&nbsp;?</legend>
+									<p>
+										<input type="checkbox" id="adobe1" name="moins">
+										<label for="adobe1">Adobe Reader</label>
+									</p>
+									<p>
+										<input type="checkbox" id="word1" name="moins">
+										<label for="word1">Microsoft Word</label>
+									</p>
+									<p>
+										<input type="checkbox" id="frontpage1" name="moins">
+										<label for="frontpage1">Microsoft Front Page</label>
+									</p>
+									<p>
+										<input type="checkbox" id="publisher1" name="moins">
+										<label for="publisher1">Microsoft Publisher</label>
+									</p>
+									<p>
+										<input type="checkbox" id="finalcut1" name="moins">
+										<label for="finalcut1">Apple Final cut pro</label>
+									</p>
+									<p>
+										<input type="checkbox" id="thunderbird1" name="moins">
+										<label for="thunderbird1">Thunderbird</label>
+									</p>
+								</fieldset>
 
 								<p>
-									<input type="submit" value="Voter maintenant" id="sendBtn" aria-label="Envoyer" />
+									<!--  Exercice 3 : La propriété aria-label est supprimé du bouton, son contenu ne reprenait pas le nom visible. -->
+									<input type="submit" value="Voter maintenant" id="sendBtn" />
 								</p>
 
 							</form>
