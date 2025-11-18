@@ -33,8 +33,9 @@
 					node.parentNode.removeChild( node );}
 
 				if( email.value ) {
-					errors( email, 'error-email', 'Saisissez un email valide' );
-				}
+                    //Exercice 4 : Modification du message d'erreur pour ajouter un exemple réel de saisie
+                    errors( email, 'required-email', 'Saisissez un email valide, par exemple jean@dupont.fr' );
+                }
 				else{
 					errors( email, 'error-email', msg );
 				}
@@ -65,6 +66,8 @@
 			parent.insertBefore( required, obj );
 			required.setAttribute( 'id', label );
 			obj.classList.add('required');
+			//Exercice 4 : Ajout d'une propriété aria-describedby aux champs qui affichent des erreurs
+            obj.setAttribute( 'aria-describedby', label );
 		}	
 		
 		// 
