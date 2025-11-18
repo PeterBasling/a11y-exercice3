@@ -42,18 +42,25 @@
 				errormsg.focus();
 			}
 		}
-		else{
-			var success = document.createElement( 'p' );
-			var successText = document.createTextNode( 'Votre vote a été envoyé ! Merci pour votre temps.' );
-			success.appendChild( successText );
-			success.setAttribute( 'class','send-ok' );
-			success.classList.add('a42-bgcolor-c5');
-			success.setAttribute( 'id','p-msg-ok' );
-			successmessage.appendChild( success );
-			form.remove();
-			nom.value = '';
-			email.value = '';
-		}
+		//Envois avec succès
+        else{
+            var success = document.createElement( 'p' );
+            var successText = document.createTextNode( 'Votre vote a été envoyé ! Merci pour votre temps.' );
+            success.appendChild( successText );
+            success.setAttribute( 'class','success' );
+            success.classList.add('a42-bgcolor-c5');
+            //Exercice 4 : pour que la reprise de focus sur le message de succès définie ci-après soit fonctionnelle, on ajoute la propriété tabindex="-1" au conteneur cible
+            success.setAttribute( 'tabindex','-1' );
+            success.setAttribute( 'role','alert' );
+            success.setAttribute( 'id','msg-success' );
+            successmessage.appendChild( success );
+            myForm.remove();
+            //reset
+            nom.value = '';
+            email.value = '';
+            //Exercice 4 : reprise de focus sur le message de succès lorsque le formulaire est envoyé avec succès
+            success.focus();
+        }
 		function errors( obj, label, text ){
 			var text = document.createTextNode( text );
 			var required = document.createElement( 'span' );
