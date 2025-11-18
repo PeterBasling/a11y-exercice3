@@ -366,11 +366,12 @@
 
 		</div>
 
-			<div id="modal-content" class="modal subscribe padding-top-120" aria-modal="true" tabindex="-1">
-				<div class="modal-dialog text-center">
-					<button class="close btn" id="btn-close-modal" aria-label="fermer"><i class="icon-close"></i></button>
+	<!-- Exercice 4 : Ajout des proprétés aria-labelledby="modal-title" et role="dialog". -->
+	<div id="modal-content" class="modal subscribe padding-top-120" aria-labelledby="modal-title" aria-modal="true" tabindex="-1" role="dialog">
+		<div class="modal-dialog text-center" tabindex="0" role="document">
+			<button class="close btn" id="btn-close-modal" aria-label="fermer"><i class="icon-close"></i></button>
 
-					<!-- Exercice 2 : Au sein d'une fenêtre modale, la hiérarchie des titres reprend au début puisque l'utilisateur entre dans un nouveau contexte de la page. Ce texte est dont un titre de niveau 1. -->
+			<!-- Exercice 2 : Au sein d'une fenêtre modale, la hiérarchie des titres reprend au début puisque l'utilisateur entre dans un nouveau contexte de la page. Ce texte est dont un titre de niveau 1. -->
 					<h1 id="modal-title">La loi de Moore</h1>
 
 					<div class="a42-gallery-2cols">

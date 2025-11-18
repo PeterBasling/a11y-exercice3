@@ -9,6 +9,8 @@
 	btnOpen.addEventListener( 'click', function(){	
 		block.classList.add( 'is-visible' );
 		underDialog.setAttribute( 'aria-hidden', 'true' );
+		//Exercice 4 : à l'ouverture de la modale, on force la reprise de focus sur btnClose (#btn-close-modal : le bouton de fermeture de la fenêtre modale)
+        btnClose.focus();
 		document.addEventListener( 'focus', focusIn, true );
 		document.addEventListener( 'click', clikIn, true );
 		document.addEventListener( 'keyup', function( event) {		
@@ -50,6 +52,8 @@
 	function endFunction(){		
 		block.classList.remove( 'is-visible' );
 		underDialog.removeAttribute( 'aria-hidden' );
+		//Exercice 4 : à la fermeture de la modale, on force la reprise de focus sur btnOpen (#modal-btn : le bouton d'ouverture dans la page "La loi de Moore en 2 secondes")
+        btnOpen.focus();
 		document.removeEventListener( 'focus', focusIn, true );
 		document.removeEventListener( 'click', clikIn, true );
 	};
